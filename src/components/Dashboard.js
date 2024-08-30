@@ -32,6 +32,7 @@ const Dashboard = () => {
       ) : (
         <div id="container">
           <div className="dashboard">
+            <NavBar/>
             <Gauge />
             <Power />
             <Prediction setLoading1={setLoading1} />

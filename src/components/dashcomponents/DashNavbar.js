@@ -1,15 +1,31 @@
 import React from 'react'
+import Logout from './Logout'
+import AccountButton from './AccountButton'
+import Toggle from './Toggle'
+import Drawer from './Drawer'
+
 
 const DashNavbar = () => {
   return (
     <div className="w-screen h-[10%] bg-slate-500 justify-center items-center">
-  <div className="flex items-center h-full ml-5 justify-between">
-    <div id='main-logo' className='items-center justify-center' >
+  <div className="flex items-center h-full ml-5 justify-around">
+    <div id='main-logo' className='flex justify-start w-3/4' >
         <h1 className='text-3xl'>AmPay</h1>
+        {/* <Drawer/> */}
     </div>
-    <div id='profile-section' className='mr-5 rounded-full items-center justify-center'>
-        <img className='h-14 rounded-full' src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"  alt="profile-pic" />
+    <div id='right-buttons' className='flex mr-20 w-1/4 gap-5'>
+        <div id='toggle-dark'>
+            <Toggle/>
+        </div>
+        <div id='account-button'>
+            <AccountButton/>
+        </div>
+        <div id='logout-button'>
+            <Logout/>
+        </div>
+        
     </div>
+
     
     
   </div>

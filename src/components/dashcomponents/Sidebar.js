@@ -36,7 +36,7 @@ const Sidebar = () => {
             Explore</button>
             <div ></div>
         </div>
-        <div id='main-content'>
+        <div id='main-content' className='h-screen overflow-y-scroll w-full'>
             {home?
             <Home/>:<h1>H1</h1>
             }

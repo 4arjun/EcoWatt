@@ -4,7 +4,7 @@ import GaugeComponent from 'react-gauge-component'
 const Home = () => {
   return (
     <>
-    <div className='flex w-[100%] h-full mt-16'>
+    <div className='flex w-[100%] mt-16'>
       <div id='overview-card' className=' h-[400px] m-5 rounded-lg'>
         <div id='title' className='flex gap-2'>
             <h1 className='text-xl'>Real-time stats</h1>
@@ -36,22 +36,40 @@ const Home = () => {
         </div>
       </div>
 
-      <div id='report-card' className='m-5 rounded-lg h-[400px]'>
+      <div id='report-card' className='m-5 rounded-lg'>
         <div id='title' className='flex gap-2'>
             <h1 className='text-xl'>Todays Report</h1>
             <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 12h-5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="1.3s" dur="0.2s" values="8;0"/><animateTransform attributeName="transform" begin="1.3s" dur="15s" repeatCount="indefinite" type="rotate" values="0 12 12;15 12 12;165 12 12;65 12 12;115 12 12;165 12 12;165 12 12;165 12 12;90 12 12;115 12 12;115 12 12;15 12 12;0 12 12"/></path></g><g fill="currentColor"><path fill-opacity="0" d="M12 21C9.41 21 7.15 20.79 5.94 19L12 21L18.06 19C16.85 20.79 14.59 21 12 21Z"><animate fill="freeze" attributeName="d" begin="0.6s" dur="0.4s" values="M12 21C9.41 21 7.15 20.79 5.94 19L12 21L18.06 19C16.85 20.79 14.59 21 12 21Z;M12 16C9.41 16 7.15 17.21 5.94 19L12 21L18.06 19C16.85 17.21 14.59 16 12 16Z"/><set fill="freeze" attributeName="fill-opacity" begin="0.6s" to="1"/></path><circle cx="7" cy="12" r="0" transform="rotate(15 12 12)"><animate fill="freeze" attributeName="r" begin="0.9s" dur="0.2s" values="0;1"/></circle><circle cx="7" cy="12" r="0" transform="rotate(65 12 12)"><animate fill="freeze" attributeName="r" begin="0.95s" dur="0.2s" values="0;1"/></circle><circle cx="7" cy="12" r="0" transform="rotate(115 12 12)"><animate fill="freeze" attributeName="r" begin="1s" dur="0.2s" values="0;1"/></circle><circle cx="7" cy="12" r="0" transform="rotate(165 12 12)"><animate fill="freeze" attributeName="r" begin="1.05s" dur="0.2s" values="0;1"/></circle><circle cx="12" cy="12" r="0"><animate fill="freeze" attributeName="r" begin="1.3s" dur="0.2s" values="0;2"/></circle></g></svg>
         </div>
-        <div className="stats stats-vertical shadow w-[500px]">
+        <div className="stats stats-vertical shadow w-[500px] h-[450px]">
             <div className="stat">
               <div className="stat-title">Consumption</div>
               <div className="stat-value"><GaugeComponent /></div>
               <div className="stat-desc">Watt</div>
             </div>
             <div className="stat">
-              <div className="stat-title">Insights</div>
-              <div className="stat-desc">20% less than yesterdays consumptions</div>
+              <div className="stat-title">Change (24h)</div>
+              <div className="stat-desc">+4.37%</div>
+              <div className="stat-desc">-1.67% this month</div>
             </div>
         </div>
+      </div>
+
+    </div>
+    <div id='news-articles-blogs' className='m-5'>
+      <div id='news-title' className='flex gap-2'>
+        <h1 className='text-xl'>For you</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h11l5 5v11q0 .825-.587 1.413T19 21zm0-2h14V9h-4V5H5zm2-2h10v-2H7zm0-8h5V7H7zm0 4h10v-2H7zM5 5v4zv14z"/></svg>
+      </div>
+      <div id='news-content' className='stats flex flex-col w-[90%] h-[200px] gap-2'>
+        <ul className='text-lg w-full mt-3'>
+          <li className='flex border-b-2 text-start'><a href="https://www.cnet.com/home/energy-and-utilities/want-to-save-an-easy-100-a-year-unplug-these-appliances/">Save About $100 Every Year by Unplugging These Appliances</a></li>
+          <li className='border-b-2 text-start'><a href="https://www.westchesterfamily.com/energy-conservation/">Energy Conservation Tips: How to Save Energy This Summer and Beyond</a></li>
+          <li className='border-b-2 text-start'><a href="https://www.westchesterfamily.com/energy-conservation/">Energy Conservation Tips: How to Save Energy This Summer and Beyond</a></li>
+          <li className='border-b-2 text-start'><a href="https://www.firstenergycorp.com/newsroom/featured_stories/earth-day.html">Celebrate Earth Day with These Energy Efficiency Tips</a></li>
+          <li className='border-b-2 text-start'><a href="https://www.westchesterfamily.com/energy-conservation/">Groundbreaking Ceremony at Woodlands Field Kicks-Off Energy Efficiency Project</a></li>
+        </ul>       
+         
       </div>
     </div>
     </>

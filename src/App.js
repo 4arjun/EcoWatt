@@ -1,6 +1,4 @@
-import './App.css';
-import Dashboard from './components/Dashboard';
-import Dashboard2 from './components/Dashboard2';
+import './App.css';import Dashboard2 from './components/Dashboard2';
 import HomePage from './components/HomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Purpose from './components/Purpose';

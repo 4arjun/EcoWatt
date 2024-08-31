@@ -109,7 +109,7 @@ const Home = () => {
             <div className="stat">
               <div className="stat-title text-4xl">Consumption</div>
               <div className="stat-value"><GaugeComponent /></div>
-              <div className="stat-desc">KWH</div>
+              <div className="stat-desc text-xl">KWH</div>
             </div>
             <div className="stat flex-col gap-1">
               <div className="stat-title text-1xl">Change (24h)</div>

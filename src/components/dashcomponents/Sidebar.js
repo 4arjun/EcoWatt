@@ -56,7 +56,7 @@ const Sidebar = () => {
   return (
     <div className='flex w-[100%]'>
         <div id='side-navigation' className='flex flex-col w-1/6 bg-black'>
-          <div id='logo-container' className='w-full flex justify-center'>
+          <div id='logo-container' className='w-full mt-5 flex ml-5'>
             <img src={logo} alt="" width={50}/>
           </div>
           <button className={`btn  ${home?"bg-primary":""} mt-5`} onClick={onHomeClick}>

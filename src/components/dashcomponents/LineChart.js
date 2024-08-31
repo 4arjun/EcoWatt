@@ -35,7 +35,7 @@ const LineChart = () => {
         tension: 0.1,
       },
       {
-        label: 'Predicted Price',
+        label: 'Last Week',
         data: [15, 20, 5, 6, 3, 4, 8], // Replace this with your predicted price data
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',

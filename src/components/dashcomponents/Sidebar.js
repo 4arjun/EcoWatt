@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import Home from './pages/Home';
-<<<<<<< Updated upstream
 import MyMap from './pages/myMap';
-=======
 import Analytics from './pages/Analytics';
->>>>>>> Stashed changes
 
 const Sidebar = () => {
     const [home , setHome] = useState(true);

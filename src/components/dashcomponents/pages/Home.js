@@ -54,6 +54,29 @@ const Home = () => {
             </div>
         </div>
       </div>
+      <div id='limiter' className='m-5 rounded-lg'>
+        <div id='limiter-title' className='flex gap-2'>
+          <h1>Set Limiter value</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M18 15c0 2.6-1.2 4.9-3.1 6.3l-.5-.5l-2.1-2.1l1.4-1.4l1.2 1.2c.5-.7.9-1.6 1-2.5H14v-2h1.9c-.2-.9-.5-1.7-1-2.5l-1.2 1.2l-1.4-1.4l1.2-1.2c-.7-.5-1.6-.9-2.5-1V11H9V9.1c-.9.2-1.7.5-2.5 1l3 3c.2 0 .3-.1.5-.1a2 2 0 1 1 0 4c-1.11 0-2-.89-2-2c0-.2 0-.3.1-.5l-3-3c-.5.7-.9 1.6-1 2.5H6v2H4.1c.2.9.5 1.7 1 2.5l1.2-1.2l1.4 1.4l-2.6 2.6C3.2 19.9 2 17.6 2 15c0-4.42 3.58-8 8-8s8 3.58 8 8m5-10c0-1.66-1.34-3-3-3s-3 1.34-3 3c0 1.3.84 2.4 2 2.82V11h2V7.82C22.16 7.4 23 6.3 23 5m-3 1c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1"/></svg>
+        </div>
+        <div className='stats w-[200px] flex flex-col'>
+          <div className='stat stat-desc'>Stop supply after a limit.</div>
+          <div className='stat fle'>
+        <form className='flex flex-col h-full justify-center gap-3'>
+          <label for="limit"></label>
+          <select name="limitter_value" id="limit_value" className='rounded-lg'>
+            <option value="10">10KW/hr</option>
+            <option value="20">20KW/hr</option>
+            <option value="30">30KW/hr</option>
+            <option value="40">40KW/hr</option>
+          </select>
+          <button className='btn btn-primary'>Submit</button>
+        </form>
+        </div>
+        </div>
+        
+        
+      </div>
 
     </div>
     <div id='news-articles-blogs' className='m-5'>

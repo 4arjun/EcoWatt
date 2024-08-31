@@ -78,7 +78,7 @@ const ZonalMapping = () => {
       </div>
       <div id='row-3' className='flex items-end justify-end w-full '>
         <button onClick={togglemain}>
-            <img className={!main?"grayscale":"grayscale-0"} src={logo} width={80} alt="" />
+            <img className={!main?"grayscale":"grayscale-0"} src={logo} width={100} alt="" />
         </button>
         
       </div>

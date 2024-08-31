@@ -3,7 +3,8 @@ import CircularMeter from '../CircularMeter';
 import React from 'react';
 
 const CarbonFootPrint = () => {
-    const value = 95;
+    
+    const value = 55;
 
     return (
         <div className="h-full flex justify-center items-center w-full">

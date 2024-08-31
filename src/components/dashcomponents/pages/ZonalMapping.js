@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "../stylesheets/ZonalMapping.css"
 import logo from '../../../images/Group 27.png';
+import axios from 'axios';
+import baseUrl from '../../../urls';
+
 
 const ZonalMapping = () => {
     const [toggle1 , setToggle1] = useState(true)
     const [toggle2 , setToggle2] = useState(true)
     const [toggle3 , setToggle3] = useState(true)
     const [main , setMain] = useState(true)
+
+
+    // 
+
 
     const handleToggle1 = (e)=> {
         {toggle1? setToggle1(false): setToggle1(true)}
@@ -24,7 +31,42 @@ const ZonalMapping = () => {
         }else{setMain(true)}
         setToggle1(false);
         setToggle2(false)
-        setToggle3(false)
+        setToggle3(false)}
+
+    //Fun CHatgpt
+    const sendDataToDjango = (value) => {
+      // Use the Fetch API to send a POST request to the Django backend
+      fetch(`${baseUrl}/send_data_to_arduino/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',  // Use form-urlencoded for sending data
+          'X-CSRFToken': getCookie('csrftoken'),  // Include CSRF token for Django
+        },
+        body:`data=${value}`,  // Send the button value as form data
+      })
+        .then((response) => response.text())  // Convert the response to text
+        .then((data) => {
+          console.log(data);  // Log the response data to the console
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    };
+  
+    // Function to get the CSRF token from cookies
+    const getCookie = (name) => {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === name + '=') {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
 
     }
   return (
@@ -40,7 +82,7 @@ const ZonalMapping = () => {
                 <hr />
                 <h2>RMS Power: 23 Watts</h2>
                 <h2>Units: 3KW/hr</h2>
-                <input type="checkbox" checked={toggle1} onChange={handleToggle1} className="toggle toggle-success toggle-lg" defaultChecked />
+                <input type="checkbox" checked={toggle1} onChange={() => sendDataToDjango(1)} className="toggle toggle-success toggle-lg" defaultChecked />
               </div>
             </div>
         </div>
@@ -55,7 +97,7 @@ const ZonalMapping = () => {
                 <hr />
                 <h2>RMS Power: 23 Watts</h2>
                 <h2>Units: 3KW/hr</h2>
-                <input type="checkbox" checked={toggle2} onChange={handleToggle2} className="toggle toggle-success toggle-lg" defaultChecked />
+                <input type="checkbox" checked={toggle2} onChange={() => sendDataToDjango(2)} className="toggle toggle-success toggle-lg" defaultChecked />
               </div>
             </div>
         </div>
@@ -71,14 +113,14 @@ const ZonalMapping = () => {
                 <hr />
                 <h2>RMS Power: 23 Watts</h2>
                 <h2>Units: 3KW/hr</h2>
-                <input type="checkbox" checked={toggle3} onChange={handleToggle3} className="toggle toggle-success toggle-lg" defaultChecked />
+                <input type="checkbox" checked={toggle3} onChange={() => sendDataToDjango(3)} className="toggle toggle-success toggle-lg" defaultChecked />
               </div>
             </div>
         </div>
       </div>
       <div id='row-3' className='flex items-end justify-end w-full '>
-        <button onClick={togglemain}>
-            <img className={!main?"grayscale":"grayscale-0"} src={logo} width={100} alt="" />
+        <button onClick={() => sendDataToDjango(5)}>
+            <img className={!main?"grayscale":"grayscale-0"} src={logo} width={80} alt="" />
         </button>
         
       </div>

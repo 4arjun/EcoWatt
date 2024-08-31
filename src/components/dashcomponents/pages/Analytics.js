@@ -21,7 +21,8 @@ const Analytics = () => {
             </div>
             
         </div>
-        <div id='row-2' className='flex gap-3 w-full'>
+
+        <div id='row-2' className='flex gap-5 w-full'>
             <div className="stats stats-vertical shadow w-[30%]">
                 <div className='stat '>
                     <div className="stat-title font-bold text-2xl">CARBON FOOTPRINT</div>
@@ -36,6 +37,7 @@ const Analytics = () => {
                     </div>
                     
                 </div>
+
             </div>
             <div id='pie-container' className='flex w-[800px] order-first'>
                 {/* <Zone/> */}

@@ -30,7 +30,7 @@ const Analytics = () => {
         <div id='row-2' className='flex gap-5 w-full'>
             <div className="stats stats-vertical shadow w-[30%]">
                 <div className='stat '>
-                    <div className="stat-title">COST PREDICTION</div>
+                    <div className="stat-title">CARBON FOOTPRINT</div>
                     <div className="stat-desc">Projection for August</div>
                 </div>
                 <div className="stat">

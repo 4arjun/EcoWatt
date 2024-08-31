@@ -1,7 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import GaugeComponent from 'react-gauge-component'
 
 const Home = () => {
+  useEffect(() => {
+    // Request notification permission on component mount
+    requestNotificationPermission();
+  }, []);
+
+  const handleSendNotification = () => {
+    const options = {
+      body: 'Limiter Triggered!! Power Supply has been turned off'
+    };
+
+    sendNotification('Trigger Warning', options);
+  };
   return (
     <>
     <div className='flex w-[100%] mt-16'>
@@ -70,7 +82,7 @@ const Home = () => {
             <option value="30">30KW/hr</option>
             <option value="40">40KW/hr</option>
           </select>
-          <button className='btn btn-primary'>Submit</button>
+          <button className='btn btn-primary' onClick={handleSendNotification}>Submit</button>
         </form>
         </div>
         </div>
@@ -98,5 +110,23 @@ const Home = () => {
     </>
   )
 }
+
+const requestNotificationPermission = () => {
+  if (Notification.permission !== 'granted') {
+    Notification.requestPermission().then((permission) => {
+      if (permission === 'granted') {
+        console.log('Notification permission granted.');
+      }
+    });
+  }
+};
+
+const sendNotification = (title, options) => {
+  if (Notification.permission === 'granted') {
+    new Notification(title, options);
+  } else {
+    console.log('Notification permissions not granted!');
+  }
+};
 
 export default Home

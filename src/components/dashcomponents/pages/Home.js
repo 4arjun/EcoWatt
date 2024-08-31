@@ -134,7 +134,7 @@ const Home = () => {
             <option value="30">30KW/hr</option>
             <option value="40">40KW/hr</option>
           </select>
-          <button className='btn btn-primary mb-8'>Submit</button>
+          <button className='btn btn-primary mb-8' onClick={handleSendNotification}>Submit</button>
         </form>
         </div>
         </div>

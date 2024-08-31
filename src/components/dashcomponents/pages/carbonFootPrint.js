@@ -1,29 +1,19 @@
-import './carbonFootPrint.css'
+// CarbonFootPrint.js
+import CircularMeter from '../CircularMeter';
 import React from 'react';
 
-const CarbonFootPrint =()=>{
-    return(
-        <div className='carbon-foot-bg h-full'>
-            <svg class="circle-svg" viewBox="0 0 36 36">
-  <path
-    class="circle-bg"
-    d="M18 2.0845
-       a 15.9155 15.9155 0 0 1 0 31.831
-       a 15.9155 15.9155 0 0 1 0 -31.831"
-  />
-  <path
-    class="circle-progress"
-    stroke-dasharray="75, 100"
-    d="M18 2.0845
-       a 15.9155 15.9155 0 0 1 0 31.831
-       a 15.9155 15.9155 0 0 1 0 -31.831"
-  />
-  <text x="18" y="20.35" class="circle-text"></text>
-</svg>
+const CarbonFootPrint = () => {
+    const value = 95;
 
-
+    return (
+        <div className="h-full flex justify-center items-center w-full">
+            <div className="flex justify-center items-center relative mx-auto p-10 w-[700px] h-[600px] bg-slate-600/30 border border-white/20 rounded-xl shadow-xl">
+                <div className="flex flex-col  items-center justify-centertext-center">
+                    <CircularMeter value={value} size={500} />
+                </div>
+            </div>
         </div>
+    );
+};
 
-    )
-}
-export default CarbonFootPrint
+export default CarbonFootPrint;

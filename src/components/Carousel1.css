@@ -1,12 +1,29 @@
 .carousel-container {
     margin-top: 0vh;
-    height: 93vh;
+    height: 100vh;
     width: 100%;
     position: relative;     
 }
 
 .carousel-img {
     height: 100%;
+}
+
+.img-text{
+    font-size: larger;
+    z-index: 99;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+}
+.img-text h1 {
+    font-size: 45px;
+    word-break: break-all;
+
+}
+
+.img-text-container {
+    width: 100px;
 }
 
 .carousel-img img {
@@ -59,4 +76,91 @@
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
  
+  }
+
+  @keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.img-text h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.img-text h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: reveal 0.5s forwards;
+}
+
+.img-text h1 span:nth-child(1) {
+    animation-delay: 0s;
+}
+.img-text h1 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.img-text h1 span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.img-text h1 span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.img-text h1 span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.img-text h1 span:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.img-text h1 span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.img-text h1 span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.img-text h1 span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+.img-text h1 span:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+.img-text h1 span:nth-child(11) {
+    animation-delay: 2s;
+}
+.img-text h1 span:nth-child(12) {
+    animation-delay: 2.2s;
+}
+.img-text h1 span:nth-child(13) {
+    animation-delay: 2.4s;
+}
+
+.img-text h1 span:nth-child(14) {
+    animation-delay: 2.6s;
+}
+
+.img-text h1 span:nth-child(15) {
+    animation-delay: 2.8s;
+}
+.img-text h1 span:nth-child(16) {
+    animation-delay: 3s;
+}
+.img-text h1 span:nth-child(17) {
+    animation-delay: 3.2s;
+}
+
+
+.img-font {
+    font-family: "Nerko One", cursive;
+    font-weight: 600;
+    font-style: normal;
   }

@@ -8,14 +8,13 @@ const Vision = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                // Check if the section is intersecting with the viewport
                 if (entries[0].isIntersecting) {
                     setVisibleHeader(true);
                 } else {
                     setVisibleHeader(false);
                 }
             },
-            { threshold: 0 } 
+            { threshold: 0.1 } 
         );
         observer.observe(sectionRef.current);
         return () => {

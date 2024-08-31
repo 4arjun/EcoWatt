@@ -1,0 +1,30 @@
+
+.circle-svg {
+    width: 230px;
+    height: 230px;
+    position: relative;
+    left:55px;
+    top:-30px;
+    border-style: none !important;
+    
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke-width: 3.8;
+  }
+  
+  .circle-progress {
+    fill: none;
+    stroke: green;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+  }
+  
+  .circle-text {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-anchor: middle;
+    fill: black;
+  }
+  

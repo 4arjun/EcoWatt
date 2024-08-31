@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Home from './pages/Home';
+
 import MyMap from './pages/myMap';
+
 import Analytics from './pages/Analytics';
+
 
 const Sidebar = () => {
     const [home , setHome] = useState(true);
@@ -41,10 +44,8 @@ const Sidebar = () => {
         </div>
         <div id='main-content' className='h-screen overflow-y-scroll w-full'>
             {analy?
-            <Analytics/>:<h1>H1</h1>
+            <Analytics/>:home?<Home/>:exp?<MyMap/>:<h1>404</h1>
             }
-            {exp?
-            <MyMap/>:<h1>404</h1>}
         </div>
     </div>
   )

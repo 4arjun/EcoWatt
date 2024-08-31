@@ -1,10 +1,11 @@
 import React from 'react'
 import LineChart from '../LineChart'
+import Zone from './Zone'
 
 
 const Analytics = () => {
   return (
-    <div id='main-analytics-container' className='flex flex-col gap-10 w-full m-16'>
+    <div id='main-analytics-container' className='flex flex-col gap-6 w-full m-16'>
         <div id='row-1' className='flex gap-5 w-full h-1/2'>
             <div id='chart-container' className='w-1/2'>
                 <LineChart/>
@@ -40,6 +41,9 @@ const Analytics = () => {
                     </div>
                     
                 </div>
+            </div>
+            <div id='pie-container' className='w-1/2'>
+                <Zone/>
             </div>
         </div>
     </div>

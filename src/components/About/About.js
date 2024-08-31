@@ -8,7 +8,6 @@ const Home = () => {
     return (
     <div id='about1' className='about-container'>   
         <Vision />
-        <MovingText />
         <Card /> 
         <Features />
     </div>

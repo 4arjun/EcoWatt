@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import Home from './pages/Home';
+<<<<<<< Updated upstream
 import MyMap from './pages/myMap';
+=======
+import Analytics from './pages/Analytics';
+>>>>>>> Stashed changes
 
 const Sidebar = () => {
     const [home , setHome] = useState(true);
@@ -39,8 +43,8 @@ const Sidebar = () => {
             
         </div>
         <div id='main-content' className='h-screen overflow-y-scroll w-full'>
-            {home?
-            <Home/>:<h1>H1</h1>
+            {analy?
+            <Analytics/>:<h1>H1</h1>
             }
             {exp?
             <MyMap/>:<h1>404</h1>}
